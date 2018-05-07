@@ -1,0 +1,16 @@
+<component name="libraryTable">
+  <library name="ajt-2.9">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/Downloads/neuroph-2.93b/libs/ajt-2.9.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/neuroph-2.93b/libs/android-x.x.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/neuroph-2.93b/libs/javaml-0.1.7.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/neuroph-2.93b/libs/logback-classic-1.0.13.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/neuroph-2.93b/libs/logback-core-1.1.2.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/neuroph-2.93b/libs/slf4j-api-1.7.5.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/neuroph-2.93b/libs/slf4j-nop-1.7.6.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/neuroph-2.93b/libs/weka.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
