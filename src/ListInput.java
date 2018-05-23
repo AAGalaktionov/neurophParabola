@@ -16,7 +16,7 @@ public class ListInput {
 
 
     ///file parse
-    public void fileParse () {
+    public void fileParse() {
         try (BufferedReader br = new BufferedReader(new FileReader(addres))) {
             StringBuilder sb = new StringBuilder();
             String line = br.readLine();
@@ -33,14 +33,16 @@ public class ListInput {
 
 
             int count = 0;
-            for (int i = 0; i < strMas.length; i += 5) {
-                Double[] tmpList = new Double[3];
+            for (int i = 0; i < strMas.length; i += 2) {
+                Double[] tmpList = new Double[1];
                 Double[] tmpListOut = new Double[1];
-                tmpList[0] = (Double.parseDouble(strMas[i+1]));
-                tmpList[1] = (Double.parseDouble(strMas[i+3]));
-                tmpList[2] = (Double.parseDouble(strMas[i+4]));
+                tmpList[0] = (Double.parseDouble(strMas[i]));
+                // tmpList[0] = (Double.parseDouble(strMas[i+1]));
+                // tmpList[1] = (Double.parseDouble(strMas[i+3]));
+                // tmpList[2] = (Double.parseDouble(strMas[i+4]));
 
-                tmpListOut[0] = (Double.parseDouble(strMas[i + 2])) ;
+               // tmpListOut[0] = (Double.parseDouble(strMas[i + 2]));
+                tmpListOut[0] = (Double.parseDouble(strMas[i + 1]));
                 inputList.add(count, tmpList);
                 outputList.add(count, tmpListOut);
                 count++;
