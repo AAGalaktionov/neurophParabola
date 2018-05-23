@@ -57,9 +57,9 @@ public class Main implements LearningEventListener {
         Data dataTest = new Data("src/resources/tren.txt");
         dataTest.fileParse();*/
 
-        ListInput l = new ListInput("src/resources/tren.txt");
+        ListInput l = new ListInput("src/resources/trenS.txt");
         l.fileParse();
-        ListInput l2 = new ListInput("src/resources/test.txt");
+        ListInput l2 = new ListInput("src/resources/testingS.txt");
         //ListInput l2 = new ListInput("src/resources/tren2.txt");
         l2.fileParse();
 
@@ -75,8 +75,8 @@ public class Main implements LearningEventListener {
     public void run(ArrayList<Double[]> input, ArrayList<Double[]> output, ArrayList<Double[]> inputTest, ArrayList<Double[]> outputTest) {
 
         // create training set (logical XOR function)
-        DataSet trainingSet = new DataSet(1, 1);
-        DataSet testSet = new DataSet(1, 1);
+        DataSet trainingSet = new DataSet(3, 1);
+        DataSet testSet = new DataSet(3, 1);
 
 
         for (int i = 0; i < inputTest.size(); i++) {
@@ -97,14 +97,14 @@ public class Main implements LearningEventListener {
 
 
         // create multi layer perceptron
-        MultiLayerPerceptron myMlPerceptron = new MultiLayerPerceptron(TransferFunctionType.SIGMOID, 1, 3, 1);
+        MultiLayerPerceptron myMlPerceptron = new MultiLayerPerceptron(TransferFunctionType.SIGMOID, 3, 5, 1);
         myMlPerceptron.randomizeWeights(new WeightsRandomizer(new Random(123)));
 
         System.out.println(Arrays.toString(myMlPerceptron.getWeights()));
 
         myMlPerceptron.setLearningRule(new BackPropagation());
         myMlPerceptron.getLearningRule().setLearningRate(0.2);
-        myMlPerceptron.getLearningRule().setMaxError(0.0000001);
+        myMlPerceptron.getLearningRule().setMaxError(0.000145);
         // myMlPerceptron.getLearningRule().setMaxIterations(5000);
 
 
